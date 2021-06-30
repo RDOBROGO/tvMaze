@@ -1,5 +1,5 @@
 export const getShowsByKey = key => {
-return fetch(`http://api.tvmaze.com/singlesearch/shows?q=${key}`).then(resp => resp.json());
+return fetch(`http://api.tvmaze.com/search/shows?q=${key}`).then(resp => resp.json());
 }
 
 export const getShowsById = id => {
