@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/main.css">
   <title>TV Maze</title>
 </head>
@@ -22,8 +23,13 @@
           <button class="dropdown-item" data-show-name="happy">happy</button>
         </div>
       </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="movieTitle" placeholder="Write title of movie">
+        <label for="movieTitle">Write title of movie</label>
+      </div>
+      <button id="movieTitleButton" type="button" class="btn btn-primary">Search</button>
     </div>
-
+    <p id="SearchError" style="display: none;">Movie does not exist</p>
     <div class="show-preview" id="showPreview">
     </div>
 
