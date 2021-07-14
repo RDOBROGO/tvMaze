@@ -10,7 +10,7 @@ body {
 
 .shows-wrapper {
   display: flex;
-  gap: 1.334%;
+  gap: 1.33%;
   flex-wrap: wrap;
 }
 
@@ -58,20 +58,22 @@ body {
 .card-body-preview{
   position: relative;
   display: grid;
-  padding: 20px;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: auto;
+  padding: 5%;
+  grid-template-columns: 35% 25% 25%;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-areas: 
     "title title title"
     "img text text"
     "img text text"
-    "img text text"
-    "img text text";
+    ". text text"
+    "closeDetails . heartButton";
   min-height: 556px;
+  grid-column-gap: 5%;
 }
 
 .card-body-preview .btn-primary {
   max-width: 160px;
+  grid-area: closeDetails;
 }
 
 .form-floating label {
@@ -95,6 +97,7 @@ padding: 5px;
 }
 
 .btn-icons-heart {
+  grid-area: heartButton;
   bottom: 20px;
   height: 30px;
   width: 30px;
