@@ -141,8 +141,10 @@ class TvMaze {
         } else {
             btnCard.addEventListener('click', this.OpenDetailsView);
         }
-        btnCardFavorite.addEventListener('click', this.AddToFavorite); //Usunąć listener po zamnknieciu details
-
+        btnCardFavorite.addEventListener('click', event => {
+            this.fetchAndDisplayShows();
+            this.AddToFavorite(event); //Usunąć listener po zamnknieciu details
+        })
         divCard.appendChild(divCardBody);
         divCardBody.appendChild(imgCard);
         divCardBody.appendChild(h5Card);
